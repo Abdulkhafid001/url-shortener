@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+{% block title%} Get URL {% endblock%} 
+{% block content %}
+<p>URL: {{url.long_url}}</p>
+<p>Short code: {{url.short_code}}</p>
+<p>Expires: {{url.expiry}}</p>
+<p>Custom alias: {{url.custom_alias}}</p>
+<p id="no url found">URL not found</p>
+<div class="d-flex">
+    <a class="linkbtn create" href={% url 'create url' %} target="_blank">Add URL</a>
+    <a id="visitbtn" data-shortcode="{{url.short_code}}" class="linkbtn" href={% url 'visit url' url.short_code %} target="_blank">Visit URL</a>
+    <a class="linkbtn edit" href={% url 'edit url' url.short_code %} target="_blank">Edit URL</a>
+    <a class="linkbtn delete" href={% url 'delete url' url.short_code %} target="_blank">Delete URL</a>
+</div>
+<p>{{msg}}<p>
+{% endblock %}

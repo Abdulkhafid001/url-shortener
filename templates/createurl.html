@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Create URL{% endblock %}
+
+{% block content %}
+<div class="container">
+    <form action="{%url 'create url' %}" method="POST">
+        {% csrf_token %}
+        <label for="longurl">Enter Long url to Shorten</label>
+        <input type="text" name='longurl' placeholder="enter long url">
+        <label for="customalias">Enter custom alias</label>
+        <input type="text" name='customalias' placeholder="enter custom alias (Optional)">
+        <input id="submitBtn" type="submit" value="Shorten URL">
+    </form>
+    <p id="duplicatemsg"></p>
+
+</div>
+{% endblock %}
