@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}URLs{% endblock %} 
+{% block content%}
+<h1>URLs in database</h1>
+{% for link in urls%}
+    <p>Link: {{link.long_url}}</p>
+    <p>Short code: {{link.short_code}}</p>
+    <p>Expiry date: {{link.expiry}}</p>
+    <p>Custom alias: {{link.custom_alias}}</p>
+    <p>Clicks: {{link.clicks}}</p>
+{% endfor %} 
+{% endblock %}

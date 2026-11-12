@@ -3,5 +3,6 @@ from django.urls import include, path
 from links.views import health
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('health/', health)
+    path('health/', health),
+    path("", include('links.urls'))
 ]

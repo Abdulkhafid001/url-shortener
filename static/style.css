@@ -1,0 +1,66 @@
+* {
+    color: #242424;
+}
+
+body {
+    margin: 16px;
+}
+
+/* Create URL Page styles */
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+form {
+    margin: auto;
+}
+
+label {
+    font-size: 24px;
+}
+
+form input {
+    display: block;
+    margin: 16px auto;
+    padding: 24px;
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid #242424;
+    border-radius: 16px;
+}
+
+form input[type='submit'] {
+    background-color: #191970;
+    color: white;
+    font-size: 20px;
+}
+
+.linkbtn {
+    padding: 16px;
+    color: #ffffff;
+    background-color: #191970;
+    display: block;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.edit {
+    background-color: #3939e2;
+}
+
+.delete {
+    background-color: #ac1700;
+}
+.create{
+    background-color: #25ac00;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
